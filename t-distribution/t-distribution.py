@@ -17,3 +17,17 @@ plt.plot(x, y3)
 plt.plot(x, y4, 'r:')
 plt.legend(('df=1', 'df=3', 'df=10', 'norm'))
 plt.show()
+
+'''
+On a sample of 15 observations using a one-sample t-test
+the null hypothesis is tested: μ = 10
+and the calculated t-value is -2 (t = -2), then the p-level of significance (two-sided) is: 
+'''
+from scipy import stats
+
+t = -2
+n = 15
+df = n - 1
+
+p = 2 * stats.t.sf(abs(t), df)
+print(f'p = {p:.3f}')  # p = 0.065
