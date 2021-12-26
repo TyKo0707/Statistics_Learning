@@ -1,5 +1,6 @@
 from scipy import stats
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Samples to compare
 data = pd.DataFrame({
@@ -34,3 +35,5 @@ if p < 0.05:
     print('Reject the null hypothesis ')
 else:
     print('NOT reject the null hypothesis ')
+
+plt.show()
