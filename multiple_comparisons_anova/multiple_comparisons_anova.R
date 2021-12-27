@@ -31,10 +31,11 @@ false_alarm <- function(m, n, a) {
   x <- as.data.frame(table(x))
   barplot(x$Freq, names.arg = c("No", "Yes"),
           col = c("Red", "Blue"),
-          main = x$Freq[2]/1000*100,
+          main = x$Freq[2]/100000*100,
           ylab = "Quantity",
           xlab = "Significant differences",
           ylim = c(0,1000))
 }
 
 false_alarm(2, 30, 0.05)
+
