@@ -2,6 +2,7 @@ M = 0
 D = 1
 
 false_alarm <- function(m, n, a) {
+  
   # Creating empty data frame with n observations (rows) and m samples (columns)
   d <- data.frame(matrix(0, n, m))
   # Creating matrix of the possible combinations of variables for the future t-test 
@@ -28,6 +29,7 @@ false_alarm <- function(m, n, a) {
       if(TEST < a) break
     }
   }
+  
   x <- as.data.frame(table(x))
   barplot(x$Freq, names.arg = c("No", "Yes"),
           col = c("Red", "Blue"),
@@ -37,5 +39,5 @@ false_alarm <- function(m, n, a) {
           ylim = c(0,1000))
 }
 
-false_alarm(2, 30, 0.05)
+false_alarm(8, 30, 0.05)
 
