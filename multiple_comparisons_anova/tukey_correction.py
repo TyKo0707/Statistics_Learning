@@ -3,10 +3,7 @@ import numpy as np
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 np.random.seed(123)
-a = []
-b = []
-c = []
-d = []
+a, b, c, d = [], [], [], []
 
 df = pd.DataFrame({'RT': np.random.randn(100), 'Cond': np.random.choice(['A', 'B', 'C', 'D'], 100)})
 
