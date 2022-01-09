@@ -22,4 +22,5 @@ se = std / sqrt(n)
 alpha = (1 - p) / 2
 sigma = stats.norm().isf(alpha)
 conf_interv = mean - sigma * se, mean + sigma * se
+
 print('[%.2f; %.2f]' % conf_interv)
