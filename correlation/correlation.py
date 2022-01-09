@@ -35,4 +35,15 @@ ax3.scatter(x, y2)
 ax1.set_title('High correlation')
 ax2.set_title('Medium correlation')
 ax3.set_title('Low correlation')
+
+print(f'''
+cov1: {cov(x, y):.2f}
+cov2: {cov(x, y1):.2f}
+cov3: {cov(x, y2):.2f}
+
+cor1: {cor(x, y):.2f}
+cor2: {cor(x, y1):.2f}
+cor3: {cor(x, y2):.2f}
+''')
+
 plt.show()
