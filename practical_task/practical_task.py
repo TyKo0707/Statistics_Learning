@@ -14,6 +14,8 @@ with open('states.csv', newline='') as file:
 data.sort()
 data = np.array(data)
 
+# slope - b1, intercept - b0, r - coefficient of correlation,
+# p - p-value for a hypothesis, std_err - standard error of the estimated slope
 slope, intercept, r, p, std_err = linregress(data[:, 0], data[:, 1])
 
 x = np.linspace(75, 100)
@@ -24,4 +26,12 @@ plt.scatter(data[:, 0], data[:, 1])
 plt.title('Linear Regression')
 plt.plot(x, reg(x), color='r', label='fitted line')
 plt.legend()
+print(f'''
+slope = {slope:.2f}
+intercept = {intercept:.2f}
+r = {r:.2f}
+r squared = {(r ** 2):.2f}
+p = {p:.5f}
+std_err = {std_err:.3f}
+''')
 plt.show()
