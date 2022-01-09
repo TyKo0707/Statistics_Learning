@@ -1,7 +1,7 @@
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
-from correlation.correlation import cov, cor
+from scipy.stats import linregress
 
 data = []
 
@@ -14,6 +14,14 @@ with open('states.csv', newline='') as file:
 data.sort()
 data = np.array(data)
 
+slope, intercept, r, p, std_err = linregress(data[:, 0], data[:, 1])
+
+x = np.linspace(75, 100)
+reg = lambda x: intercept + slope * x
+
 plt.figure(figsize=(25, 10), dpi=80)
 plt.scatter(data[:, 0], data[:, 1])
+plt.title('Linear Regression')
+plt.plot(x, reg(x), color='r', label='fitted line')
+plt.legend()
 plt.show()
