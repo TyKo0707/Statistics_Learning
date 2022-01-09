@@ -28,22 +28,23 @@ y = randomize(x, 0.1)
 y1 = randomize(x, 0.5)
 y2 = randomize(x, 1)
 
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 3))
-ax1.scatter(x, y)
-ax2.scatter(x, y1)
-ax3.scatter(x, y2)
-ax1.set_title('High correlation')
-ax2.set_title('Medium correlation')
-ax3.set_title('Low correlation')
+if __name__ == "__main__":
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 3))
+    ax1.scatter(x, y)
+    ax2.scatter(x, y1)
+    ax3.scatter(x, y2)
+    ax1.set_title('High correlation')
+    ax2.set_title('Medium correlation')
+    ax3.set_title('Low correlation')
 
-print(f'''
-cov1: {cov(x, y):.2f}
-cov2: {cov(x, y1):.2f}
-cov3: {cov(x, y2):.2f}
+    print(f'''
+    cov1: {cov(x, y):.2f}
+    cov2: {cov(x, y1):.2f}
+    cov3: {cov(x, y2):.2f}
+    
+    cor1: {cor(x, y):.2f}
+    cor2: {cor(x, y1):.2f}
+    cor3: {cor(x, y2):.2f}
+    ''')
 
-cor1: {cor(x, y):.2f}
-cor2: {cor(x, y1):.2f}
-cor3: {cor(x, y2):.2f}
-''')
-
-plt.show()
+    plt.show()
