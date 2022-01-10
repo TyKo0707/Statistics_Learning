@@ -25,7 +25,8 @@ p = stats.t.cdf(t, df)
 
 if p < threshold:
     print(f'The null hypothesis can be rejected since p = {p} < {threshold}.\n'
-          f'There is a lower than 1% chance of making a Type 1 error.')
+          f'There is a lower than 1% chance of making a Type 1 error.\n'
+          f'This type of engine most likely meets the new standard')
 else:
     print(f'The null hypothesis cannot be rejected since p = {p} > {threshold}.')
 
