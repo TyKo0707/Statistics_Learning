@@ -28,5 +28,5 @@ if p < threshold:
           f'There is a lower than 1% chance of making a Type 1 error.\n'
           f'This type of engine most likely meets the new standard')
 else:
-    print(f'The null hypothesis cannot be rejected since p = {p} > {threshold}.')
+    print(f'The null hypothesis cannot be rejected since p = {p} >= {threshold}.')
 
