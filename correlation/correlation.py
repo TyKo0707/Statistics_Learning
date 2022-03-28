@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 
 
 def cov(x, y):
-    # the same as "if (x.size == y.size) else 'Samples must have same size'"
-    assert x.size == y.size, 'Samples must have same size'
+    # the same as "if (x.size == y.size) else 'Samples must have the same size'"
+    assert x.size == y.size, 'Samples must have the same size'
     return ((x - x.mean()) * (y - y.mean())).sum() / (x.size - 1)
 
 
