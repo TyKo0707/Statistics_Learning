@@ -24,14 +24,14 @@ reg = lambda x: intercept + slope * x
 plt.figure(figsize=(25, 10), dpi=80)
 plt.scatter(data[:, 0], data[:, 1])
 plt.title('Linear Regression')
+plt.xlabel('HS graduation %')
+plt.ylabel('Poverty %')
 plt.plot(x, reg(x), color='r', label='fitted line')
 plt.legend()
-print(f'''
-slope = {slope:.2f}
+print(f'''slope = {slope:.2f}
 intercept = {intercept:.2f}
 r = {r:.2f}
 r squared = {(r ** 2):.2f}
 p = {p:.5f}
-std_err = {std_err:.3f}
-''')
+std_err = {std_err:.3f}''')
 plt.show()
